@@ -1,0 +1,9 @@
+#!/bin/bash
+build="build"
+run="run"
+if [ "$1" = "${build}" ]; then 
+docker build -t cfngtest .
+fi
+if [ "$1" = "${run}" ]; then 
+docker run -p 19999:80  -d  cfngtest
+fi 
